@@ -1,0 +1,1265 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A.L.A. SCHECHTER POULTRY CORPORATION v. UNITED STATES 295 U.S. 495 (1935) - 设计者：王静雯</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a1929;
+      --bg-secondary: #132f4c;
+      --bg-tertiary: #1a3a52;
+      --surface: #1e3a5f;
+      --surface-light: #2a4d6e;
+      --text-primary: #e3f2fd;
+      --text-secondary: #b0bec5;
+      --text-muted: #78909c;
+      --accent-blue: #3d8bfd;
+      --accent-cyan: #00bcd4;
+      --accent-gold: #ffc107;
+      --border-subtle: rgba(255,255,255,0.08);
+      --border-strong: rgba(255,255,255,0.15);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.5);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.6);
+      --gradient-primary: linear-gradient(135deg, #1e3a5f 0%, #0a1929 100%);
+      --gradient-accent: linear-gradient(135deg, #3d8bfd 0%, #00bcd4 100%);
+    }
+    [data-theme="light"] {
+      --bg-primary: #f5f7fa;
+      --bg-secondary: #ffffff;
+      --bg-tertiary: #e8eef5;
+      --surface: #ffffff;
+      --surface-light: #f8f9fa;
+      --text-primary: #1a202c;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --accent-blue: #2563eb;
+      --accent-cyan: #0891b2;
+      --accent-gold: #f59e0b;
+      --border-subtle: rgba(0,0,0,0.08);
+      --border-strong: rgba(0,0,0,0.15);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+      --gradient-primary: linear-gradient(135deg, #ffffff 0%, #e8eef5 100%);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      transition: all 0.3s ease;
+    }
+    .hero-header {
+      background: var(--gradient-primary);
+      border-bottom: 2px solid var(--border-strong);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow-md);
+    }
+    .hero-title {
+      font-weight: 800;
+      font-size: 1.75rem;
+      letter-spacing: -0.03em;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-subtitle {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .card-pro {
+      background: var(--surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-pro::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--gradient-accent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .card-pro:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border-strong);
+    }
+    .card-pro:hover::before { opacity: 1; }
+    .section-title {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid var(--accent-blue);
+      display: inline-block;
+    }
+    .subsection-title {
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin: 1.5rem 0 1rem 0;
+      color: var(--accent-cyan);
+    }
+    .btn-primary-pro {
+      background: var(--gradient-accent);
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 0.625rem 1.5rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-primary-pro:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      filter: brightness(1.1);
+    }
+    .btn-outline-pro {
+      border: 2px solid var(--border-strong);
+      color: var(--text-primary);
+      background: transparent;
+      font-weight: 600;
+      padding: 0.5rem 1.25rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    .btn-outline-pro:hover {
+      background: var(--surface-light);
+      border-color: var(--accent-blue);
+      color: var(--accent-blue);
+    }
+    .sidebar-nav {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 1.5rem;
+      border: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+    .sidebar-nav::-webkit-scrollbar { width: 6px; }
+    .sidebar-nav::-webkit-scrollbar-track { background: var(--bg-tertiary); border-radius: 3px; }
+    .sidebar-nav::-webkit-scrollbar-thumb { background: var(--accent-blue); border-radius: 3px; }
+    .nav-link-pro {
+      color: var(--text-secondary);
+      padding: 0.625rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight:  500;
+      transition: all 0.2s;
+      border-left: 3px solid transparent;
+      margin-bottom: 0.25rem;
+      display: block;
+      text-decoration: none;
+    }
+    .nav-link-pro:hover {
+      background: var(--surface-light);
+      color: var(--accent-cyan);
+      border-left-color: var(--accent-cyan);
+      padding-left: 1.25rem;
+    }
+    .nav-link-pro.active {
+      background: var(--gradient-accent);
+      color: white;
+      border-left-color: var(--accent-gold);
+    }
+    .table-pro {
+      background: var(--surface);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+    }
+    .table-pro thead {
+      background: var(--bg-tertiary);
+      border-bottom: 2px solid var(--border-strong);
+    }
+    .table-pro th {
+      color: var(--text-primary);
+      font-weight: 700;
+      padding: 1rem;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .table-pro td {
+      padding: 1rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .table-pro tbody tr:hover {
+      background: var(--surface-light);
+    }
+    .glossary-term {
+      color: var(--accent-cyan);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+    }
+    .glossary-term:hover {
+      color: var(--accent-gold);
+      border-bottom-color: var(--accent-gold);
+    }
+    .badge-level {
+      padding: 0.375rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .badge-basic { background: rgba(61, 139, 253, 0.2); color: var(--accent-blue); }
+    .badge-intermediate { background: rgba(0, 188, 212, 0.2); color: var(--accent-cyan); }
+    .badge-advanced { background: rgba(255, 193, 7, 0.2); color: var(--accent-gold); }
+    .input-pro {
+      background: var(--bg-tertiary);
+      border: 2px solid var(--border-subtle);
+      color: var(--text-primary);
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+    }
+    .input-pro:focus {
+      outline: none;
+      border-color: var(--accent-blue);
+      background: var(--surface);
+      box-shadow: 0 0 0 4px rgba(61, 139, 253, 0.1);
+    }
+    .input-pro::placeholder { color: var(--text-muted); }
+    .flashcard {
+      background: var(--gradient-primary);
+      border: 2px solid var(--border-strong);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    .flashcard::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: radial-gradient(circle, rgba(61, 139, 253, 0.2) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    .flashcard:hover::after {
+      width: 300px;
+      height: 300px;
+    }
+    .accordion-pro .accordion-item {
+      background: var(--surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .accordion-pro .accordion-button {
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+      font-weight: 600;
+      padding: 1.25rem 1.5rem;
+      border: none;
+      transition: all 0.3s;
+    }
+    .accordion-pro .accordion-button:not(.collapsed) {
+      background: var(--gradient-accent);
+      color: white;
+    }
+    .accordion-pro .accordion-body {
+      padding: 1.5rem;
+      background: var(--surface);
+      color: var(--text-secondary);
+    }
+    .progress-indicator {
+      height: 4px;
+      background: var(--bg-tertiary);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+    .progress-bar-pro {
+      height: 100%;
+      background: var(--gradient-accent);
+      transition: width 0.5s ease;
+    }
+    .stats-card {
+      background: var(--gradient-primary);
+      border: 2px solid var(--border-strong);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .stats-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stats-label {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    #backTop {
+      position: fixed;
+      right: 2rem;
+      bottom: 2rem;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--gradient-accent);
+      color: white;
+      border: none;
+      box-shadow: var(--shadow-lg);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      z-index: 999;
+    }
+    #backTop:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.7);
+    }
+    .bilingual-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 1.5rem;
+      background: var(--surface);
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+    }
+    .bilingual-side {
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .bilingual-left {
+      border-right: 2px solid var(--border-subtle);
+    }
+    @media (max-width: 991px) {
+      .bilingual-container { grid-template-columns: 1fr; }
+      .bilingual-left { border-right: none; border-bottom: 2px solid var(--border-subtle); }
+    }
+    mark.highlight {
+      background: rgba(61, 139, 253, 0.25);
+      color: var(--accent-cyan);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .modal-pro .modal-content {
+      background: var(--surface);
+      border: 2px solid var(--border-strong);
+      border-radius: 16px;
+      color: var(--text-primary);
+    }
+    .modal-pro .modal-header {
+      border-bottom: 2px solid var(--border-subtle);
+      padding: 1.5rem;
+    }
+    .modal-pro .modal-body {
+      padding: 1.5rem;
+    }
+    .phrase-item, .pattern-item {
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+      background: var(--bg-tertiary);
+      border-radius: 8px;
+      border-left: 3px solid var(--accent-cyan);
+      transition: all 0.3s;
+    }
+    .phrase-item:hover, .pattern-item:hover {
+      background: var(--surface-light);
+      transform: translateX(5px);
+    }
+    .opinion-text {
+      font-family: 'Noto Serif SC', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      white-space: pre-wrap;
+    }
+    .word { cursor: pointer; }
+    .word:hover { color: var(--accent-gold); }
+    .read-btn { margin-left: 1rem; }
+    .master-btn { font-size: 0.8rem; padding: 0.25rem 0.5rem; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="hero-header py-3">
+    <div class="container-fluid px-4">
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+        <div>
+          <h1 class="hero-title mb-1">A.L.A. SCHECHTER POULTRY CORPORATION v. UNITED STATES 295 U.S. 495 (1935)</h1>
+          <p class="hero-subtitle mb-0">设计者：王静雯</p>
+        </div>
+        <div class="d-flex gap-2 align-items-center">
+          <button id="themeToggle" class="btn-outline-pro">
+            <i id="themeIcon" class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid px-4 py-4">
+    <div class="row g-4">
+      <!-- Sidebar -->
+      <aside class="col-lg-3 d-none d-lg-block">
+        <nav class="sidebar-nav">
+          <h5 class="mb-3 text-uppercase" style="font-size: 0.875rem; font-weight: 700; color: var(--text-muted); letter-spacing: 0.1em;">导航</h5>
+          <div class="d-flex flex-column">
+            <a class="nav-link-pro active" href="#overview">1. 概览统计</a>
+            <a class="nav-link-pro" href="#design">2. 设计说明</a>
+            <a class="nav-link-pro" href="#elements">3. 法庭意见书要素</a>
+            <a class="nav-link-pro" href="#glossary">4. 双语知识库</a>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="col-lg-9">
+        <!-- 1. Overview Stats -->
+        <section id="overview" class="mb-4">
+          <h2 class="section-title">1. 概览统计</h2>
+          <div class="row g-3">
+            <div class="col-md-3 col-sm-6">
+              <div class="stats-card">
+                <div class="stats-number">20</div>
+                <div class="stats-label">法律术语</div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="stats-card">
+                <div class="stats-number">10</div>
+                <div class="stats-label">固定短语</div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="stats-card">
+                <div class="stats-number">5</div>
+                <div class="stats-label">典型句型</div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="stats-card">
+                <div class="stats-number" id="progressNum">0</div>
+                <div class="stats-label">学习进度 %</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Design -->
+        <section id="design" class="mb-4">
+          <h2 class="section-title">2. 设计说明</h2>
+          <div class="card-pro">
+            <div class="row g-4">
+              <div class="col-md-4">
+                <h5 style="color: var(--accent-blue); font-weight: 700; margin-bottom: 1rem;">
+                  <i class="fa-solid fa-tools me-2"></i>技术栈
+                </h5>
+                <ul class="list-unstyled" style="color: var(--text-secondary); line-height: 2;">
+                  <li><i class="fa-solid fa-check text-success me-2"></i>Bootstrap 5 响应式框架</li>
+                  <li><i class="fa-solid fa-check text-success me-2"></i>Web Speech API 语音合成</li>
+                  <li><i class="fa-solid fa-check text-success me-2"></i>LocalStorage 数据持久化</li>
+                  <li><i class="fa-solid fa-check text-success me-2"></i>原生 JavaScript 交互逻辑</li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h5 style="color: var(--accent-cyan); font-weight: 700; margin-bottom: 1rem;">
+                  <i class="fa-solid fa-route me-2"></i>设计过程
+                </h5>
+                <ol style="color: var(--text-secondary); line-height: 2;">
+                  <li>用AI输入请求</li>
+                  <li>生成代码</li>
+                  <li>预览并微调</li>
+                  <li>最后上传至GitHub</li>
+                </ol>
+              </div>
+              <div class="col-md-4">
+                <h5 style="color: var(--accent-gold); font-weight: 700; margin-bottom: 1rem;">
+                  <i class="fa-solid fa-lightbulb me-2"></i>核心功能
+                </h5>
+                <ul class="list-unstyled" style="color: var(--text-secondary); line-height: 2;">
+                  <li><i class="fa-solid fa-volume-high me-2"></i>双语语音朗读</li>
+                  <li><i class="fa-solid fa-brain me-2"></i>闪卡记忆系统</li>
+                  <li><i class="fa-solid fa-search me-2"></i>智能术语检索</li>
+                  <li><i class="fa-solid fa-download me-2"></i>数据导出功能</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Elements -->
+        <section id="elements" class="mb-4">
+          <h2 class="section-title">3. 法庭意见书要素 (English)</h2>
+          <div class="accordion accordion-pro" id="elementsAccord">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#elem1">
+                  1. Case Caption - 案件标题
+                </button>
+              </h2>
+              <div id="elem1" class="accordion-collapse collapse show" data-bs-parent="#elementsAccord">
+                <div class="accordion-body">
+                  <p><strong>Definition:</strong> The formal title identifying the parties and court.</p>
+                  <p><strong>Example:</strong> <em>A.L.A. Schechter Poultry Corporation v. United States</em></p>
+                  <p class="text-muted">案件标题是法律文件的官方名称，明确诉讼双方及管辖法院。</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#elem2">
+                  2. Citation - 判例引用
+                </button>
+              </h2>
+              <div id="elem2" class="accordion-collapse collapse" data-bs-parent="#elementsAccord">
+                <div class="accordion-body">
+                  <p><strong>Citation:</strong> 295 U.S. 495 (1935)</p>
+                  <p>这是查找本案的标准引用格式，包括卷号、报告系列和页码。</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#elem3">
+                  3. Facts - 案件事实
+                </button>
+              </h2>
+              <div id="elem3" class="accordion-collapse collapse" data-bs-parent="#elementsAccord">
+                <div class="accordion-body">
+                  <p>The Schechter brothers were convicted under the National Industrial Recovery Act (NIRA) for violating the Live Poultry Code in New York.</p>
+                  <p class="text-muted">谢克特兄弟因违反国家工业复兴法（NIRA）下的活禽准则而在纽约被定罪。</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#elem4">
+                  4. Legal Issue - 法律争议
+                </button>
+              </h2>
+              <div id="elem4" class="accordion-collapse collapse" data-bs-parent="#elementsAccord">
+                <div class="accordion-body">
+                  <p><strong>Issue:</strong> Does Congress exceed its commerce power by regulating intrastate poultry sales, and is the delegation of legislative authority under NIRA unconstitutional?</p>
+                  <p class="text-muted">国会通过规制州内家禽销售是否超出其商业权？NIRA下的立法权委托是否违宪？</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#elem5">
+                  5. Holding - 判决结果
+                </button>
+              </h2>
+              <div id="elem5" class="accordion-collapse collapse" data-bs-parent="#elementsAccord">
+                <div class="accordion-body">
+                  <p><strong>Holding:</strong> The Court unanimously held the NIRA unconstitutional on both commerce clause and non-delegation grounds.</p>
+                  <p class="text-muted">法院一致裁定NIRA在商业条款和不可委托原则上均违宪。</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#elem6">
+                  6. Reasoning - 判决理由
+                </button>
+              </h2>
+              <div id="elem6" class="accordion-collapse collapse" data-bs-parent="#elementsAccord">
+                <div class="accordion-body">
+                  <p>Chief Justice Hughes distinguished direct and indirect effects on interstate commerce and found no adequate standards for delegation.</p>
+                  <p class="text-muted">首席大法官休斯区分了对州际商业的直接与间接影响，并认定委托缺乏充分标准。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Glossary -->
+        <section id="glossary" class="mb-4">
+          <h2 class="section-title">4. 双语知识库</h2>
+          
+          <!-- 4.1 Terms -->
+          <h3 class="subsection-title">4.1 20个词（含术语）</h3>
+          <div class="card-pro mb-4">
+            <div class="row g-3 mb-3">
+              <div class="col-md-8">
+                <input id="termSearch" class="input-pro w-100" placeholder="搜索术语、定义或中文释义...">
+              </div>
+              <div class="col-md-4 d-flex gap-2">
+                <button id="exportJson" class="btn-outline-pro flex-fill">
+                  <i class="fa-solid fa-download me-1"></i>JSON
+                </button>
+                <button id="exportCsv" class="btn-outline-pro flex-fill">
+                  <i class="fa-solid fa-file-csv me-1"></i>CSV
+                </button>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-pro mb-0">
+                <thead>
+                  <tr>
+                    <th style="width: 20%">Term</th>
+                    <th style="width: 35%">English (Definition)</th>
+                    <th style="width: 25%">中文（标准译法）</th>
+                    <th style="width: 10%">Lvl</th>
+                    <th style="width: 10%">操作</th>
+                  </tr>
+                </thead>
+                <tbody id="glossaryBody">
+                  <!-- 填充唯一20个术语 + 掌握按钮 -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 4.2 Phrases -->
+          <h3 class="subsection-title">4.2 10个关键短语</h3>
+          <div class="card-pro mb-4">
+            <div class="table-responsive">
+              <table class="table table-pro mb-0">
+                <thead>
+                  <tr>
+                    <th style="width: 45%">English Phrase</th>
+                    <th style="width: 45%">中文释义</th>
+                    <th style="width: 10%">操作</th>
+                  </tr>
+                </thead>
+                <tbody id="phrasesBody">
+                  <!-- 填充10个短语 + 掌握按钮 -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 4.3 Patterns -->
+          <h3 class="subsection-title">4.3 5个典型句型（双语对照）</h3>
+          <div class="card-pro mb-4">
+            <div class="table-responsive">
+              <table class="table table-pro mb-0">
+                <thead>
+                  <tr>
+                    <th style="width: 45%">English Pattern</th>
+                    <th style="width: 45%">中文句型</th>
+                    <th style="width: 10%">操作</th>
+                  </tr>
+                </thead>
+                <tbody id="patternsBody">
+                  <!-- 填充5个句型 + 掌握按钮 -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 全文意见书 (折叠 + 点击单词朗读 + 全文朗读按钮) -->
+          <h3 class="subsection-title mt-5">判决书全文</h3>
+          <div class="card-pro mb-4">
+            <div class="accordion-pro">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fullOpinion">
+                    展开/折叠完整判决书意见 (点击任意单词朗读)
+                  </button>
+                </h2>
+                <div id="fullOpinion" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <button id="readFull" class="btn-outline-pro mb-3"><i class="fa-solid fa-volume-high me-1"></i>朗读全文</button>
+                    <p id="opinionText" class="opinion-text"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 闪卡记忆 -->
+          <h3 class="subsection-title">闪卡记忆</h3>
+          <div class="card-pro mb-4">
+            <div id="flashcardContainer" class="flashcard text-center">
+              <p class="mb-0" style="font-size: 1.5rem; font-weight: 600;">点击卡片翻转</p>
+            </div>
+            <div class="d-flex justify-content-between mt-3">
+              <button id="prevCard" class="btn-outline-pro"><i class="fa-solid fa-arrow-left me-1"></i>上一张</button>
+              <button id="masterCurrent" class="btn-outline-pro master-btn"><i class="fa-solid fa-check me-1"></i>掌握</button>
+              <button id="nextCard" class="btn-outline-pro">下一张<i class="fa-solid fa-arrow-right ms-1"></i></button>
+            </div>
+          </div>
+
+          <!-- 智能术语检索 (现在基于全文) -->
+          <h3 class="subsection-title">智能术语检索</h3>
+          <div class="card-pro mb-4">
+            <input id="globalSearch" class="input-pro w-100 mb-3" placeholder="在判决书全文中搜索术语（高亮显示）...">
+            <div id="searchResults" class="mt-3"></div>
+          </div>
+
+          <!-- 学习进度跟踪 -->
+          <h3 class="subsection-title">学习进度跟踪</h3>
+          <div class="card-pro mb-4">
+            <div class="progress-indicator">
+              <div id="progressBar" class="progress-bar-pro" style="width: 0%;"></div>
+            </div>
+            <p class="text-center">已掌握 <span id="masteredCount">0</span> / 35 项</p>
+            <div class="text-center mt-2">
+              <button id="resetProgress" class="btn-outline-pro btn-sm">重置进度</button>
+            </div>
+          </div>
+
+          <!-- 参考资料 -->
+          <h3 class="subsection-title">参考资料</h3>
+          <div class="card-pro">
+            <ul class="list-unstyled" style="color: var(--text-secondary); line-height: 2;">
+              <li><i class="fa-solid fa-link me-2"></i><a href="https://supreme.justia.com/cases/federal/us/295/495/" target="_blank" style="color: var(--accent-cyan);">完整判决书原文 (Justia)</a></li>
+              <li><i class="fa-solid fa-book me-2"></i>Oyez Project 案例摘要</li>
+              <li><i class="fa-solid fa-graduation-cap me-2"></i>Harvard Law Review 相关评论</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <button id="backTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // 主题切换
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const body = document.body;
+    themeToggle.addEventListener('click', () => {
+      if (body.hasAttribute('data-theme')) {
+        body.removeAttribute('data-theme');
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+      } else {
+        body.setAttribute('data-theme', 'light');
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+      }
+    });
+
+    // 唯一20个术语数据 (去除重复)
+    const termsData = [
+      { term: 'delegation of legislative power', def: 'Transfer of Congress\'s law-making authority to another branch or entity.', chi: '立法权委托', lvl: '进阶' },
+      { term: 'commerce clause', def: 'Constitutional provision granting Congress power to regulate interstate commerce.', chi: '商业条款', lvl: '进阶' },
+      { term: 'separation of powers', def: 'Division of government authority among legislative, executive, and judicial branches.', chi: '三权分立', lvl: '基础' },
+      { term: 'codes of fair competition', def: 'Industry-specific rules under NIRA to regulate trade practices.', chi: '公平竞争准则', lvl: '进阶' },
+      { term: 'interstate commerce', def: 'Trade or transactions crossing state lines, subject to federal regulation.', chi: '州际商业', lvl: '基础' },
+      { term: 'intrastate commerce', def: 'Trade or transactions occurring entirely within one state.', chi: '州内商业', lvl: '基础' },
+      { term: 'National Industrial Recovery Act', def: 'New Deal legislation authorizing industry codes (NIRA, 1933).', chi: '国家工业复兴法', lvl: '基础' },
+      { term: 'unfair methods of competition', def: 'Practices harmful to fair trade, broader than common-law unfair competition.', chi: '不公平竞争方法', lvl: '进阶' },
+      { term: 'direct effect', def: 'Immediate impact on interstate commerce justifying federal regulation.', chi: '直接影响', lvl: '进阶' },
+      { term: 'indirect effect', def: 'Remote or secondary impact insufficient for federal commerce power.', chi: '间接影响', lvl: '进阶' },
+      { term: 'live poultry code', def: 'NIRA code regulating wages, hours, and sales in poultry industry.', chi: '活禽准则', lvl: '基础' },
+      { term: 'administrative procedure', def: 'Formal process (notice, hearing, findings) for agency decisions.', chi: '行政程序', lvl: '进阶' },
+      { term: 'executive order', def: 'Presidential directive approving or prescribing industry codes.', chi: '行政命令', lvl: '基础' },
+      { term: 'slaughterhouse operators', def: 'Businesses engaged in killing and processing poultry for sale.', chi: '屠宰场经营者', lvl: '基础' },
+      { term: 'straight killing', def: 'Code requirement to sell poultry without customer selection of birds.', chi: '直杀（无挑选销售）', lvl: '进阶' },
+      { term: 'federalism', def: 'System dividing power between national and state governments.', chi: '联邦制', lvl: '基础' },
+      { term: 'non-delegation doctrine', def: 'Principle prohibiting Congress from transferring core legislative functions.', chi: '不可委托原则', lvl: '重点' },
+      { term: 'judicial review', def: 'Court\'s authority to assess constitutionality of laws or actions.', chi: '司法审查', lvl: '进阶' },
+      { term: 'public interest', def: 'General welfare justifying government regulation under police powers.', chi: '公共利益', lvl: '基础' },
+      { term: 'monopolistic practices', def: 'Actions eliminating competition or creating monopolies, prohibited by codes.', chi: '垄断行为', lvl: '进阶' }
+    ];
+
+    // 短语数据
+    const phrasesData = [
+      { eng: 'delegation of legislative power', chi: '立法权委托' },
+      { eng: 'codes of fair competition', chi: '公平竞争准则' },
+      { eng: 'interstate commerce', chi: '州际商业' },
+      { eng: 'affecting interstate commerce', chi: '影响州际商业' },
+      { eng: 'unfair methods of competition', chi: '不公平竞争方法' },
+      { eng: 'separation of powers', chi: '三权分立' },
+      { eng: 'direct and indirect effects', chi: '直接与间接影响' },
+      { eng: 'commerce clause', chi: '商业条款' },
+      { eng: 'intrastate transactions', chi: '州内交易' },
+      { eng: 'standards of fair competition', chi: '公平竞争标准' }
+    ];
+
+    // 句型数据
+    const patternsData = [
+      { eng: 'The provisions of the code regulate intrastate transactions which affect interstate commerce only indirectly.', chi: '该准则的规定仅间接影响州际商业的州内交易。' },
+      { eng: 'Congress cannot delegate its legislative power to the President without adequate standards.', chi: '国会不得在无充分标准的情况下将立法权委托给总统。' },
+      { eng: 'The distinction between direct and indirect effects upon interstate commerce must be maintained.', chi: '必须维持对州际商业直接与间接影响的区分。' },
+      { eng: 'This is an unconstitutional delegation of legislative power.', chi: '这是违宪的立法权委托。' },
+      { eng: 'The federal government may not regulate local activities with merely remote effects on interstate commerce.', chi: '联邦政府不得规制仅对州际商业有遥远影响的本地活动。' }
+    ];
+
+    // 所有35项用于闪卡 (术语+短语+句型)，并添加唯一ID
+    const flashcardData = [
+      ...termsData.map((t, i) => ({ id: `term-${i}`, front: t.term, back: `${t.def}<br><small>${t.chi}</small>` })),
+      ...phrasesData.map((p, i) => ({ id: `phrase-${i}`, front: p.eng, back: p.chi })),
+      ...patternsData.map((p, i) => ({ id: `pattern-${i}`, front: p.eng, back: p.chi }))
+    ];
+
+    // 填充术语表 + 掌握按钮
+    const glossaryBody = document.getElementById('glossaryBody');
+    termsData.forEach((item, i) => {
+      const row = document.createElement('tr');
+      const badgeClass = item.lvl === '基础' ? 'badge-basic' : item.lvl === '进阶' ? 'badge-intermediate' : 'badge-advanced';
+      row.innerHTML = `
+        <td>${item.term}</td>
+        <td>${item.def}</td>
+        <td>${item.chi}</td>
+        <td><span class="badge-level ${badgeClass}">${item.lvl}</span></td>
+        <td><button class="btn btn-sm btn-outline-pro master-btn" data-id="term-${i}"><i class="fa-solid fa-check"></i> 掌握</button></td>
+      `;
+      glossaryBody.appendChild(row);
+    });
+
+    // 填充短语表 + 掌握按钮
+    const phrasesBody = document.getElementById('phrasesBody');
+    phrasesData.forEach((item, i) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `<td>${item.eng}</td><td>${item.chi}</td><td><button class="btn btn-sm btn-outline-pro master-btn" data-id="phrase-${i}"><i class="fa-solid fa-check"></i> 掌握</button></td>`;
+      phrasesBody.appendChild(row);
+    });
+
+    // 填充句型表 + 掌握按钮
+    const patternsBody = document.getElementById('patternsBody');
+    patternsData.forEach((item, i) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `<td>${item.eng}</td><td>${item.chi}</td><td><button class="btn btn-sm btn-outline-pro master-btn" data-id="pattern-${i}"><i class="fa-solid fa-check"></i> 掌握</button></td>`;
+      patternsBody.appendChild(row);
+    });
+
+    // 学习进度管理
+    let mastered = new Set(JSON.parse(localStorage.getItem('mastered') || '[]'));
+
+    function saveMastered() {
+      localStorage.setItem('mastered', JSON.stringify(Array.from(mastered)));
+    }
+
+    function updateProgress() {
+      const count = mastered.size;
+      const percent = Math.round((count / 35) * 100);
+      document.getElementById('masteredCount').textContent = count;
+      document.getElementById('progressNum').textContent = percent;
+      document.getElementById('progressBar').style.width = `${percent}%`;
+
+      // 更新按钮状态
+      document.querySelectorAll('.master-btn').forEach(btn => {
+        const id = btn.getAttribute('data-id');
+        if (mastered.has(id)) {
+          btn.textContent = '已掌握';
+          btn.disabled = true;
+          btn.classList.add('btn-success');
+          btn.classList.remove('btn-outline-pro');
+        } else {
+          btn.textContent = '掌握';
+          btn.disabled = false;
+          btn.classList.remove('btn-success');
+          btn.classList.add('btn-outline-pro');
+        }
+      });
+    }
+
+    // 绑定掌握按钮
+    document.querySelectorAll('.master-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-id');
+        mastered.add(id);
+        saveMastered();
+        updateProgress();
+      });
+    });
+
+    // 重置进度
+    document.getElementById('resetProgress').addEventListener('click', () => {
+      if (confirm('确定要重置所有学习进度吗？')) {
+        mastered.clear();
+        saveMastered();
+        updateProgress();
+      }
+    });
+
+    // 初始更新
+    updateProgress();
+
+    // 术语表搜索
+    const termSearch = document.getElementById('termSearch');
+    termSearch.addEventListener('input', () => {
+      const query = termSearch.value.toLowerCase();
+      const rows = glossaryBody.querySelectorAll('tr');
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(query) ? '' : 'none';
+      });
+    });
+
+    // 导出功能 (仅术语)
+    document.getElementById('exportJson').addEventListener('click', () => {
+      const data = JSON.stringify(termsData, null, 2);
+      downloadFile(data, 'terms.json', 'application/json');
+    });
+    document.getElementById('exportCsv').addEventListener('click', () => {
+      let csv = 'Term,English (Definition),中文（标准译法）,Lvl\n';
+      termsData.forEach(item => {
+        csv += `"${item.term}","${item.def}","${item.chi}","${item.lvl}"\n`;
+      });
+      downloadFile(csv, 'terms.csv', 'text/csv');
+    });
+    function downloadFile(content, filename, type) {
+      const blob = new Blob([content], { type });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    // 判决书全文 (从公开来源模拟，实际可替换为完整文本)
+    const fullOpinionText = ` Mr. Chief Justice HUGHES delivered the opinion of the Court.
+
+Petitioners in No. 854 were convicted in the District Court of the United States for the Eastern District of New York on eighteen counts of an indictment charging violations of what is known as the 'Live Poultry Code,'1 and on an additional count for conspiracy to commit such violations. 2 By demurrer to the indictment and appropriate motions on the trial, the defendants contended (1) that the code had been adopted pursuant to an unconstitutional delegation by Congress of legislative power; (2) that it attempted to regulate intrastate transactions which lay outside the authority of Congress; and (3) that in certain provisions it was repugnant to the due process clause of the Fifth Amendment. [295 U.S. 495, 520]   'The Circuit Court of Appeals sustained the conviction on the conspiracy count and on sixteen counts for violation of the code, but reversed the conviction on two counts which charged violation of requirements as to minimum wages and maximum hours of labor, as these were not deemed to be within the congressional power of regulation. 76 F.(2d) 617. On the respective applications of the defendants (No. 854) and of the government (No. 864), this Court granted writs of certiorari April 15, 1935. 295 U.S. 723 , 55 S.Ct. 651, 79 L.Ed. --.
+
+New York City is the largest live poultry market in the United States. Ninety-six per cent. of the live poultry there marketed comes from other states. Three-fourths of this amount arrives by rail and is consigned to commission men or receivers. Most of these freight shipments (about 75 per cent.) come in at the Manhattan Terminal of the New York Central Railroad, and the remainder at one of the four terminals in New Jersey serving New York City. The commission men transact by far the greater part of the business on a commission basis, representing the shippers as agents, and remitting to them the proceeds of sale, less commissions, freight, and handling charges. Otherwise, they buy for their own account. They sell to slaughterhouse operators who are also called marketmen.
+
+The defendants are slaughterhouse operators of the latter class. A.L. A. Schechter Poultry Corporation and Schechter Live Poultry Market are corporations conducting wholesale poultry slaughterhouse markets in Brooklyn, New York City. Joseph Schechter operated the latter corporation and also guaranteed the credits of the former corporation, which was operated by Martin, Alex, and Aaron Schechter. Defendants ordinarily purchase their live poultry from commission men at the West Washington Market in New York City or at the railroad terminals serving the city, but occasionally they purchase from commission men in Philadelphia. They buy the [295 U.S. 495, 521]   poultry for slaughter and resale. After the poultry is trucked to their slaughterhouse markets in Brooklyn, it is there sold, usually within twenty-four hours, to retail poultry dealers and butchers who sell directly to consumers. The poultry purchased from defendants is immediately slaughtered, prior to delivery, by shochtim in defendants' employ. Defendants do not sell poultry in interstate commerce.
+
+The 'Live Poultry Code' was promulgated under section 3 of the National Industrial Recovery Act. 3 That section, the pertinent provisions of which are set forth in the margin,4 authorizes the President to approve 'codes of [295 U.S. 495, 522]   fair competition.' SUCH A CODE may be approved for a trade or industry, upon application by one or more trade or industrial associations or groups, if the President finds (1) that such associations or groups 'impose no inequitable restrictions on admission to membership therein and are truly representative,' and (2) that such codes are not designed 'to promote monopolies or to eliminate or oppress small enterprises and will not operate to discrimi-
+
+___ '(c) The several district courts of the United States are hereby invested with jurisdiction to prevent and restrain violations of any code of fair competition approved under this title (chapter); and it shall be the duty of the several district attorneys of the United States, in their respective districts, under the direction of the Attorney General, to institute proceedings in equity to prevent and restrain such violations.
+
+'(d) Upon his own motion, or if complaint is made to the President that abuses inimical to the public interest and contrary to the policy herein declared are prevalent in any trade or industry or subdivision thereof, and if no code of fair competition therefor has theretofore been approved by the President, the President, after such public notice and hearing as he shall specify, may prescribe and approve a code of fair competition for such trade or industry or subdivision thereof, which shall have the same effect as a code of fair competition approved by the President under subsection (a) of this section. ...
+
+'(f) When a code of fair competition has been approved or prescribed by the President under this title (chapter), any violation of any provision thereof in any transaction in or affecting interstate or foreign commerce shall be a misdemeanor and upon conviction thereof an offender shall be fined not more than $500 for each offense, and each day such violation continues shall be deemed a separate offense.' [295 U.S. 495, 523]   nate against them, and will tend to effectuate the policy' of title 1 of the act (15 USCA 701 et seq.). Such codes 'shall not permit monopolies or monopolistic practices.' As a condition of his approval, the President may 'impose such conditions (including requirements for the making of reports and the keeping of accounts) for the protection of consumers, competitors, employees, and others, and in furtherance of the public interest, and may provide such exceptions to and exemptions from the provisions of such code as the President in his discretion deems necessary to effectuate the policy herein declared.' Where such a code has not been approved, the President may prescribe one, either on his own motion or on complaint. Violation of any provision of a code (so approved or prescribed) 'in any transaction in or affecting interstate or foreign commerce' is made a misdemeanor punishable by a fine of not more than $500 for each offense, and each day the violation continues is to be deemed a separate offense.
+
+The 'Live Poultry Code' was approved by the President on April 13, 1934. Its divisions indicate its nature and scope. The code has eight articles entitled (1) 'purposes,' (2) 'definitions,' (3) 'hours,' (4) 'wages,' (5) 'general labor provisions,' (6) 'administration,' (7) 'trade practice provisions,' and (8) 'general.'
+
+The declared purpose is 'To effect the policies of title I of the National Industrial Recovery Act.' The code is established as 'a code for fair competition for the live poultry industry of the metropolitan area in and about the City of New York.' That area is described as embracing the five boroughs of New York City, the counties of Rockland, Westchester, Nassau, and Suffolk in the state of New York, the counties of Hudson and Bergen in the state of New Jersey, and the county of Fairfield in the state of Connecticut.
+
+The 'industry' is defined as including 'every person engaged in the business of selling, purchasing of re- [295 U.S. 495, 524]   sale, transporting, or handling and/or slaughtering live poultry, from the time such poultry comes into the New York metropolitan area to the time it is first sold in slaughtered form,' and such 'related branches' as may from time to time be included by amendment. Employers are styled 'members of the industry,' and the term 'employee' is defined to embrace 'any and all persons engaged in the industry, however compensated,' except 'members.'
+
+The code fixes the number of hours for workdays. It provides that no employee, with certain exceptions, shall be permitted to work in excess of forty hours in any one week, and that no employees, save as stated, 'shall be paid in any pay period less than at the rate of fifty (50) cents per hour.' The article containing 'general labor provisions' prohibits the employment of any person under 16 years of age, and declares that employees shall have the right of 'collective bargaining' and freedom of choice with respect to labor organizations, in the terms of section 7(a) of the act (15 USCA 707(a). The minimum number of employees, who shall be employed by slaughterhouse operators, is fixed; the number being graduated according to the average volume of weekly sales.
+
+Provision is made for administration through an 'industry advisory committee,' to be selected by trade associations and members of the industry, and a 'code supervisor,' to be appointed, with the approval of the committee, by agreement between the Secretary of Agriculture and the Administrator for Industrial Recovery. The expenses of administration are to be borne by the members of the industry proportionately upon the basis of volume of business, or such other factors as the advisory committee may deem equitable, 'subject to the disapproval of the Secretary and/or Administrator.'
+
+The seventh article, containing 'trade practice provisions,' prohibits various practices which are said to consti- [295 U.S. 495, 525]   tute 'unfair methods of competition.' The final article provides for verified reports, such as the Secretary or Administrator may require, '(1) for the protection of consumers, competitors, employees, and others, and in furtherance of the public interest, and (2) for the determination by the Secretary or Administrator of the extent to which the declared policy of the act is being effectuated by this code.' The members of the industry are also required to keep books and records which 'will clearly reflect all financial transactions of their respective businesses and the financial condition thereof,' and to submit weekly reports showing the range of daily prices and volume of sales' for each kind of produce.
+
+The President approved the code by an executive order (No. 6675-A) in which he found that the application for his approval had been duly made in accordance with the provisions of title 1 of the National Industrial Recover Act; that there had been due notice and hearings; that the code constituted 'a code of fair competition' as contemplated by the act and complied with its pertinent provisions, including clauses (1) and (2) of subsection (a) of section 3 of title 1 (15 USCA 703(a)(1, 2); and that the code would tend 'to effectuate the policy of Congress as declared in section 1 of Title I.' 5   [295 U.S. 495, 526]   The executive order also recited that the Secretary of Agriculture and the Administrator of the National Industrial Recovery Act had rendered separate reports as to the provisions within their respective jurisdictions. The Secretary of Agriculture reported that the provisions of the code 'establishing standards of fair competition (a) are regulations of transactions in or affecting the current of interstate and/or foreign commerce and (b) are reason- [295 U.S. 495, 527]   able,' and also that the code would tend to effectuate the policy declared in title 1 of the act, as set forth in section 1 (15 USCA 701). The report of the Administrator for Industrial Recovery dealt with wages, hours of labor, and other labor provisions. 6  
+
+Of the eighteen counts of the indictment upon which the defendants were convicted, aside from the count for conspiracy, two counts charged violation of the minimum wage and maximum hour provisions of the code, and ten counts were for violation of the requirement (found in the 'trade practice provisions') of 'straight killing.' This requirement was really one of 'straight' selling. The term 'straight killing' was defined in the code as 'the practice of requiring persons purchasing poultry for resale to accept the run of any half coop, coop, or coops, as purchased by slaughterhouse operators, except for culls.' 7 The charges in the ten counts, respectively, were [295 U.S. 495, 528]   that the defendants in selling to retail dealers and butchers had permitted 'selections of individual chickens taken from particular coops and half coops.'
+
+Of the other six counts, one charged the sale to a butcher of an unfit chicken; two counts charged the making of sales without having the poultry inspected or approved in accordance with regulations or ordinances of the city of New York; two counts charged the making of false reports or the failure to make reports relating to the range of daily prices and volume of sales for certain periods; and the remaining count was for sales to slaughterers or dealers who were without licenses required by the ordinances and regulations of the city of New York.
+
+First. Two preliminary points are stressed by the government with respect to the appropriate approach to the important questions presented. We are told that the provision of the statute authorizing the adoption of codes must be viewed in the light of the grave national crisis with which Congress was confronted. Undoubtedly, the conditions to which power is addressed are always to be considered when the exercise of power is challenged. Extraordinary conditions may call for extraordinary remedies. But the argument necessarily stops short of an attempt to justify action which lies outside the sphere of constitutional authority. Extraordinary conditions do not create or enlarge constitutional power. 8 The Constitution established a national government with powers deemed to be adequate, as they have proved to be both in war and peace, but these powers of the national government are limited by the constitutional grants. Those who act under these grants are not at liberty to transcend the [295 U.S. 495, 529]   imposed limits because they believe that more or different power is necessary. Such assertions of extraconstitutional authority were anticipated and precluded by the explicit terms of the Tenth Amendment- 'The powers not delegated to the United States by the Constitution, nor prohibited by it to the States, are reserved to the States respectively, or to the people.'
+
+The further point is urged that the national crisis demanded a broad and intensive co-operative effort by those engaged in trade and industry, and that this necessary co-operation was sought to be fostered by permitting them to initiate the adoption of codes. But the statutory plan is not simply one for voluntary effort. It does not seek merely to endow voluntary trade or industrial associations or groups with privileges or immunities. It involves the coercive exercise of the lawmaking power. The codes of fair competition which the statute attempts to authorize are codes of laws. If valid, they place all persons within their reach under the obligation of positive law, binding equally those who assent and those who do not assent. Violations of the provisions of the codes are punishable as crimes.
+
+Second. The Question of the Delegation of Legislative Power.-We recently had occasion to review the pertinent decisions and the general principles which govern the determination of this question. Panama Refining Company v. Ryan, 293 U.S. 388 , 55 S.Ct. 241, 79 L.Ed . 446. The Constitution provides that 'All legislative powers herein granted shall be vested in a Congress of the United States, which shall consist of a Senate and House of Representatives.' Article 1, 1. And the Congress is authorized 'To make all Laws which shall be necessary and proper for carrying into Execution' its general powers. Article 1, 8, par. 18. The Congress is not permitted to abdicate or to transfer to others the essential legislative functions with which it is thus vested. We have repeatedly recognized the necessity of adapting [295 U.S. 495, 530]   legislation to complex conditions involving a host of details with which the national Legislature cannot deal directly. We pointed out in the Panama Refining Company Case that the Constitution has never been regarded as denying to Congress the necessary resources of flexibility and practicality, which will enable it to perform its function in laying down policies and establishing standards, while leaving to selected instrumentalities the making of subordinate rules within prescribed limits and the determination of facts to which the policy as declared by the Legislature is to apply. But we said that the constant recognition of the necessity and validity of such provisions, and the wide range of administrative authority which has been developed by means of them, cannot be allowed to obscure the limitations of the authority to delegate, if our constitutional system is to be maintained. Id., 293 U.S. 388 , page 421, 55 S.Ct. 241.
+
+Accordingly, we look to the statute to see whether Congress has overstepped these limitations-whether Congress in authorizing 'codes of fair competition' has itself established the standards of legal obligation, thus performing its essential legislative function, or, by the failure to enact such standards, has attempted to transfer that function to others.
+
+The aspect in which the question is now presented is distinct from that which was before us in the case of the Panama Refining Company. There the subject of the statutory prohibition was defined. National Industrial Recovery Act, 9(c), 15 USCA 709(c). That subject was the transportation in interstate and foreign commerce of petroleum and petroleum products which are produced or withdrawn from storage in excess of the amount permitted by state authority. The question was with respect to the range of discretion given to the President in prohibiting that transportation. Id., 293 U.S. 388 , pages 414, 415, 430, 55 S.Ct. 241. As to the 'codes of fair competition,' under section 3 of the act, the question is more funda- [295 U.S. 495, 531]   mental. It is whether there is any adequate definition of the subject to which the codes are to be addressed.
+
+What is meant by 'fair competition' as the term is used in the act? Does it refer to a category established in the law, and is the authority to make codes limited accordingly? Or is it used as a convenient designation for whatever set of laws the formulators of a code for a particular trade or industry may propose and the President may approve ( subject to certain restrictions), or the President may himself prescribe, as being wise and beneficient provisions for the government of the trade or industry in order to accomplish the broad purposes of rehabilitation, correction, and expansion which are stated in the first section of title 1? 9
+
+The act does not define 'fair competition.' 'Unfair competition,' as known to the common law, is a limited concept. Primarily, and strictly, it relates to the palming off of one's goods as those of a rival trader. Good- year's Rubber Manufacturing Co. v. Good-year Rubber Co., 128 U.S. 598 , [295 U.S. 495, 532]   604, 9 S.Ct. 166; Howe Scale Co. v. Wyckoff, Seamans & Benedict, 198 U.S. 118, 140 , 25 S.Ct. 609; Hanover Star Milling Co. v. Metcalf, 240 U.S. 403, 413 , 36 S.Ct. 357. In recent years, its scope has been extended. It has been held to apply to misappropriation as well as misrepresenation, to the selling of another's goods as one's own-to misappropriation of what equitably belongs to a competitor. International News Service v. Associated Press, 248 U.S. 215, 241 , 242 S., 39 S.Ct. 68, 2 A.L.R. 293. Unfairness in competition has been predicated of acts which lie outside the ordinary course of business and are tainted by fraud or coercion or conduct otherwise prohibited by law. 10 Id., 248 U.S. 315 , page 258, 39 S.Ct. 68, 2 A.L.R. 293. But it is evident that in its widest range, 'unfair competition,' as it has been understood in the law, does not reach the objectives of the codes which are authorized by the National Industrial Recovery Act. The codes may, indeed, cover conduct which existing law condemns, but they are not limited to conduct of that sort. The government does not contend that the act contemplates such a limitation. It would be opposed both to the declared purposes of the act and to its administrative construction.
+
+The Federal Trade Commission Act [section 5 (15 USCA 45 11 introduced the expression 'unfair methods of competition,' which were declared to be unlawful. That was an expression new in the law. Debate apparently convinced the sponsors of the legislation that the words 'unfair competition,' in the light of their meaning at common law, were too narrow. We have said that the substituted phrase has a broader meaning, that it does not admit of precise definition; its scope being left to judicial determination as controversies arise. Federal Trade Commission v. Raladam Co., 283 U.S. 643, 648 , 649 S., 51 S.Ct. 587, 79 A.L.R. 1191; Federal Trade Commission v. R. F. Keppel, 291 U.S. 304 , 310-312, 54 S.Ct. 423. What are [295 U.S. 495, 533]   'UNFAIR METHODS OF COMPETITION' ARE THUS to be determined in particular instances, upon evidence, in the light of particular competitive conditions and of what is found to be a specific and substantial public interest. Federal Trade Commission v. Beech-Nut Packing Co., 257 U.S. 441, 453 , 42 S.Ct. 150, 19 A.L.R. 882; Federal Trade Commission v. Klesner, 280 U.S. 19, 27 , 28 S., 50 S.Ct. 1, 68 A.L.R. 838; Federal Trade Commission v. Raladam Co., supra; Federal Trade Commission v. R. F. Keppel, supra; Federal Trade Commission v. Algoma Lumber Co., 291 U.S. 67, 73 , 54 S.Ct. 315. To make this possible, Congress set up a special procedure. A commission, a quasi judicial body, was created. Provision was made for formal complaint, for notice and hearing, for appropriate findings of fact supported by adequate evidence, and for judicial review to give assurance that the action of the commission is taken within its statutory authority. Federal Trade Commission v. Raladam Co., supra; Federal Trade Commission v. Klesner, supra. 12  
+
+In providing for codes, the National Industrial Recovery Act dispenses with this administrative procedure and with any administrative procedure of an analogous character. But the difference between the code plan of the Recovery Act and the scheme of the Federal Trade Commission Act lies not only in procedure but in subject- [295 U.S. 495, 534]   matter. We cannot regard the 'fair competition' of the codes as antithetical to the 'unfair methods of competition' of the Federal Trade Commission Act. The 'fair competition' of the codes has a much broader range and a new significance. The Recovery Act provides that it shall not be construed to impair the powers of the Federal Trade Commission, but, when a code is approved, its provisions are to be the 'standards of fair competition' for the trade or industry concerned, and any violation of such standards in any transaction in or affecting interstate or foreign commerce is to be deemed 'an unfair method of competition' within the meaning of the Federal Trade Commission Act. Section 3(b) of the act, 15 USCA 703(b).
+
+For a statement of the authorized objectives and content of the 'codes of fair competition,' we are referred repeatedly to the 'Declaration of Policy' in section 1 of title 1 of the Recovery Act (15 USCA 701). Thus the approval of a code by the President is conditioned on his finding that it 'will tend to effectuate the policy of this title.' Section 3(a) of the act, 15 USCA 703(a). The President is authorized to impose such conditions 'for the protection of consumers, competitors, employees, and others, and in furtherance of the public interest, and may provide such exceptions to and exemptions from the provisions of such code, as the President in his discretion deems necessary to effectuate the policy herein declared.' Id. The 'policy herein declared' is manifestly that set forth in section 1. That declaration embraces a broad range of objectives. Among them we find the elimination of 'unfair competitive practices.' But, even if this clause were to be taken to relate to practices which fall under the ban of existing law, either common law or statute, it is still only one of the authorized aims described in section 1. It is there declared to be 'the policy of Congress'- 'to remove obstructions to the free flow of interstate and foreign commerce which tend to diminish the amount [295 U.S. 495, 535]   thereof; and to provide for the general welfare by promoting the organization of industry for the purpose of cooperative action among trade groups, to induce and maintain united action of labor and management under adequate governmental sanctions and supervision, to eliminate unfair competitive practices, to promote the fullest possible utilization of the present productive capacity of industries, to avoid undue restriction of production (except as may be temporarily required), to increase the consumption of industrial and agricultural products by increasing purchasing power, to reduce and relieve unemployment, to improve standards of labor, and otherwise to rehabilitate industry and to conserve natural resources.' 13  
+
+Under section 3, whatever 'may tend to effectuate' these general purposes may be included in the 'codes of fair competition.' We think the conclusion is inescapable that the authority sought to be conferred by section 3 was not merely to deal with 'unfair competitive practices' which offend against existing law, and could be the subject of judicial condemnation without further legislation, or to create administrative machinery for the application of established principles of law to particular instances of violation. Rather, the purpose is clearly disclosed to authorize new and controlling prohibitions through codes of laws which would embrace what the formulators would propose, and what the President would approve or prescribe, as wise and beneficient measures for the government of trades and industries in order to bring about their rehabilitation, correction, and development, according to the general declaration of policy in section 1. Codes of laws of this sort are styled 'codes of fair competition.'
+
+We find no real controversy upon this point and we must determine the validity of the code in question in this aspect. As the government candidly says in its [295 U.S. 495, 536]   brief: 'The words 'policy of this title' clearly refer to the 'policy' which Congress declared in the section entitled 'Declaration of Policy'- Section 1. All of the policies there set forth point toward a single goal- the rehabilitation of industry and the industrial recovery which unquestionably was the major policy of Congress in adopting the National Industrial Recovery Act.' And that this is the controlling purpose of the code now before us appears both from its repeated declarations to that effect and from the scope of its requirements. It will be observed that its provisions as to the hours and wages of employees and its 'general labor provisions' were placed in separate articles, and these were not included in the article on 'trade practice provisions' declaring what should be deemed to constitute 'unfair methods of competition.' The Secretary of Agriculture thus stated the objectives of the Live Poultry Code in his report to the President, which was recited in the executive order of approval:
+
+'That said code will tend to effectuate the declared policy of title I of the National Industrial Recovery Act as set forth in section 1 of said act in that the terms and provisions of such code tend to: (a) Remove obstructions to the free flow of interstate and foreign commerce which tend to diminish the amount thereof: (b) to provide for the general welfare by promoting the organization of industry for the purpose of cooperative action among trade groups; (c) to eliminate unfair competitive practices; (d) to promote the fullest possible utilization of the present productive capacity of industries; (e) to avoid undue restriction of production (except as may be temporarily required); (f) to increase the consumption of industrial and agricultural products by increasing purchasing power; and (g) otherwise to rehabilitate industry and to conserve natural resources.' [295 U.S. 495, 537]   The government urges that the codes will 'consist of rules of competition deemed fair for each industry by representative members of that industry-by the persons most vitally concerned and most familiar with its problems.' Instances are cited in which Congress has availed itself of such assistance; as, e.g., in the exercise of its authority over the public domain, with respect to the recognition of local customs or rules of miners as to mining claims, 14 or, in matters of a more or less technical nature, as in designating the standard height of drawbars. 15 But would it be seriously contended that Congress could delegate its legislative authority to trade or industrial associations or groups so as to empower them to enact the laws they deem to be wise and beneficent for the rehabilitation and expansion of their trade or industries? Could trade or industrial associations or groups be constituted legislative bodies for that purpose because such associations or groups are familiar with the problems of their enterprises? And could an effort of that sort be made valid by such a preface of generalities as to permissible aims as we find in section 1 of title 1? The answer is obvious. Such a delegation of legislative power is unknown to our law, and is utterly inconsistent with the constitutional prerogatives and duties of Congress.
+
+The question, then, turns upon the authority which section 3 of the Recovery Act vests in the President to approve or prescribe. If the codes have standing as penal statutes, this must be due to the effect of the executive action. But Congress cannot delegate legislative power to the President to exercise an unfettered discretion to make [295 U.S. 495, 538]   whatever laws he thinks may be needed or advisable for the rehabilitation and expansion of trade or industry. See Panama Refining Company v. Ryan, supra, and cases there reviewed.
+
+Accordingly we turn to the Recovery Act to ascertain what limits have been set to the exercise of the President's discretion: First, the President, as a condition of approval, is required to find that the trade or industrial associations or groups which propose a code 'impose no inequitable restrictions on admission to membership' and are 'truly representative.' That condition, however, relates only to the status of the initiators of the new laws and not to the permissible scope of such laws. Second, the President is required to find that the code is not 'designed to promote monopolies or to eliminate or oppress small enterprises and will not operate to discriminate against them.' And to this is added a proviso that the code 'shall not permit monopolies or monopolistic practices.' But these restrictions leave virtually untouched the field of policy envisaged by section 1, and, in that wide field of legislative possibilities, the proponents of a code, refraining from monopolistic designs, may roam at will, and the President may approve or disapprove their proposals as he may see fit. That is the precise effect of the further finding that the President is to make-that the code 'will tend to effectuate the policy of this title.' While this is called a finding, it is really but a statement of an opinion as to the general effect upon the promotion of trade or industry of a scheme of laws. These are the only findings which Congress has made essential in order to put into operation a legislative code having the aims described in the 'Declaration of Policy.'
+
+Nor is the breadth of the President's discretion left to the necessary implications of this limited requirement as to his findings. As already noted, the President in approving a code may impose his own conditions, adding to [295 U.S. 495, 539]   or taking from what is proposed, as 'in his discretion' he thinks necessary 'to effectuate the policy' declared by the act. Of course, he has no less liberty when he prescribes a code on his own motion or on complaint, and he is free to prescribe one if a code has not been approved. The act provides for the creation by the President of administrative agencies to assist him, but the action or reports of such agencies, or of his other assistants-their recommendations and findings in relation to the making of codes-have no sanction beyond the will of the President, who may accept, modify, or reject them as he pleases. Such recommendations or findings in no way limit the authority which section 3 undertakes to vest in the President with no other conditions than those there specified. And this authority relates to a host of different trades and industries, thus extending the President's discretion to all the varieties of laws which he may deem to be beneficial in dealing with the vast array of commercial and industrial activities throughout the country.
+
+Such a sweeping delegation of legislative power finds no support in the decisions upon which the government especially relies. By the Interstate Commerce Act (49 USCA 1 et seq.), Congress has itself provided a code of laws regulating the activities of the common carriers subject to the act, in order to assure the performance of their services upon just and reasonable terms, with adequate facilities and without unjust discrimination. Congress from time to time has elaborated its requirements, as needs have been disclosed. To facilitate the application of the standards prescribed by the act, Congress has provided an expert body. That administrative agency, in dealing with particular cases, is required to act upon notice and hearing, and its orders must be supported by findings of fact which in turn are sustained by evidence. Interstate Commerce Commission v. Louisville & Nashville Railroad Company, 227 U.S. 88 , 33 S.Ct. 185; State of Florida v. United States, 282 U.S. 194 , 51 S.Ct. 119; United States [295 U.S. 495, 540]   v. Baltimore & Ohio Railroad Company, 293 U.S. 454 , 55 S.Ct. 268. When the Commission is authorized to issue, for the construction, extension, or abandonment of lines, a certificate of 'public convenience and necessity,' or to permit the acquisition by one carrier of the control of another, if that is found to be 'in the public interest,' we have pointed out that these provisions are not left without standards to guide determination. The authority conferred has direct relation to the standards prescribed for the service of common carriers, and can be exercised only upon findings, based upon evidence, with respect to particular conditions of transportation. New York Central Securities Corporation v. United States, 287 U.S. 12, 24 , 25 S., 53 S.Ct. 45; Texas & Pacific Railway Co. v. Gulf, Colorado & Santa Fe Railway Co., 270 U.S. 266, 273 , 46 S.Ct. 263; Chesapeake & Ohio Railway Co. v. United States, 283 U.S. 35, 42 , 51 S.Ct. 337.
+
+Similarly, we have held that the Radio Act of 192716 established standards to govern radio communications, and, in view of the limited number of available broadcasting frequencies, Congress authorized allocation and licenses. The Federal Radio Commission was created as the licensing authority, in order to secure a reasonable equality of opportunity in radio transmission and reception. The authority of the Commission to grant licenses 'as public convenience, interest or necessity requires' was limited by the nature of radio communications, and by the scope, character, and quality of the services to be rendered and the relative advantages to be derived through distribution of facilities. These standards established by Congress were to be enforced upon hearing and evidence by an administrative body acting under statutory restrictions adapted to the particular activity. Federal Radio Commission v. Nelson Brothers Bond & Mtg. Co., 289 U.S. 266 , 53 S.Ct. 627
+
+[295 U.S. 495, 541]   In Hampton, Jr. & Company v. United States, 276 U.S. 394 , 48 S.Ct. 348, 350 the question related to the 'flexible tariff provision' of the Tariff Act of 1922.17 We held that Congress had described its plan 'to secure by law the imposition of customs duties on articles of imported merchandise which should equal the difference between the cost of producing in a foreign country the articles in question and laying them down for sale in the United States, and the cost of producing and selling like or similar articles in the United States.' As the differences in cost might vary from time to time, provision was made for the investigation and determination of these differences by the executive branch so as to make 'the adjustments necessary to conform the duties to the standard underlying that policy and plan.' Id. 276 U.S. 394 , pages 404, 405, 48 S.Ct. 348, 350. The Court found the same principle to be applicable in fixing customs duties as that which permitted Congress to exercise its rate-making power in interstate commerce, 'by declaring the rule which shall prevail in the legislative fixing of rates,' and then remitting 'the fixing of such rates' in accordance with its provisions 'to a rate-making body.' Id. 276 U.S. 394 , page 409, 48 S.Ct. 348, 352. The Court fully recognized the limitations upon the delegation of legislative power. Id. 276 U.S. 394 , pages 408-411, 48 S.Ct. 348.
+
+To summarize and conclude upon this point: Section 3 of the Recovery Act (15 USCA 703 is without precedent. It supplies no standards for any trade, industry, or activity. It does not undertake to prescribe rules of conduct to be applied to particular states of fact determined by appropriate administrative procedure. Instead of prescribing rules of conduct, it authorizes the making of codes to prescribe them. For that legislative undertaking, section 3 sets up no standards, aside from the statement of the general aims of rehabilitation, correction, and expansion described in section 1. In view of the scope of that broad declaration and of the [295 U.S. 495, 542]   nature of the few restrictions that are imposed, the discretion of the President in approving or prescribing codes, and thus enacting laws for the government of trade and industry throughout the country, is virtually unfettered. We think that the code-making authority thus conferred is an unconstitutional delegation of legislative power.
+
+Third. The Question of the Application of the Provisions of the Live Poultry Code to Intrastate Transactions.-Although the validity of the codes (apart from the question of delegation) rests upon the commerce clause of the Constitution, section 3(a) of the act (15 USCA 703(a) is not in terms limited to interstate and foreign commerce. From the generality of its terms, and from the argument of the government at the bar, it would appear that section 3(a) was designed to authorize codes without that limitation. But under section 3(f) of the act (15 USCA 73(f) penalties are confined to violations of a code provision 'in any transaction in or affecting interstate or foreign commerce.' This aspect of the case presents the question whether the particular provisions of the Live Poultry Code, which the defendants were convicted for violating and for having conspired to violate, were within the regulating power of Congress.
+
+These provisions relate to the hours and wages of those employed by defendants in their slaughterhouses in Brooklyn and to the sales there made to retail dealers and butchers.
+
+Were these transactions 'in' interstate commerce? Much is made of the fact that almost all the poultry coming to New York is sent there from other states. But the code provisions, as here applied, do not concern the transportation of the poultry from other states to New York, or the transactions of the commission men or others to whom it is consigned, or the sales made by such consignees to defendants. When defendants had made their purchases, whether at the West Washington Market in New York City or at the railroad [295 U.S. 495, 543]   terminals serving the city, or elsewhere, the poultry was trucked to their slaughterhouses in Brooklyn for local disposition. The interstate transactions in relation to that poultry then ended. Defendants held the poultry at their slaughterhouse markets for slaughter and local sale to retail dealers and butchers who in turn sold directly to consumers. Neither the slaughtering nor the sales by defendants were transactions in interstate commerce. Brown v. Houston, 114 U.S. 622, 632 , 633 S., 5 S.Ct. 1091; Public Utilities Commission v. Landon, 249 U.S. 236, 245 , 39 S.Ct. 268; Industrial Association v. United States, 268 U.S. 64, 78 , 79 S., 45 S.Ct. 403; Atlantic Coast Line R. Co. v. Standard Oil Co., 275 U.S. 257, 267 , 48 S.Ct. 107.
+
+The undisputed facts thus afford no warrant for the argument that the poultry handled by defendants at their slaughterhouse markets was in a 'current' or 'flow' of interstate commerce, and was thus subject to congressional regulation. The mere fact that there may be a constant flow of commodities into a state does not mean that the flow continues after the property has arrived and has become commingled with the mass of property within the state and is there held solely for local disposition and use. So far as the poultry here in question is concerned, the flow in interstate commerce had ceased. The poultry had come to a permanent rest within the state. It was not held, used, or sold by defendants in relation to any further transactions in interstate commerce and was not destined for transportation to other states. Hence decisions which deal with a stream of interstate commerce-where goods come to rest within a state temporarily and are later to go forward in interstate commerce-and with the regulations of transactions involved in that practical continuity of movement, are not applicable here. See Swift & Company v. United States, 196 U.S. 375, 387 , 388 S., 25 S.Ct. 276; Lemke v. Farmers' Grain Company, 258 U.S. 50, 55 , 42 S.Ct. 244; Stafford v. Wallace, 258 U.S. 495, 519 , 42 S.Ct. 397, 23 A.L.R. 229; Board of Trade of City of Chi- [295 U.S. 495, 544]   cago v. Olsen, 262 U.S. 1, 35 , 43 S.Ct. 470; Tagg Bros. & Moorhead v. United States, 280 U.S. 420, 439 , 50 S.Ct. 220.
+
+Did the defendants' transactions directly 'affect' interstate commerce so as to be subject to federal regulation? The power of Congress extends, not only to the regulation of transactions which are part of interstate commerce, but to the protection of that commerce from injury. It matters not that the injury may be due to the conduct of those engaged in intrastate operations. Thus, Congress may protect the safety of those employed in interstate transportation, 'no matter what may be the source of the dangers which threaten it.' Southern Railway Company v. United States, 222 U.S. 20, 27 , 32 S.Ct. 2, 4. We said in Mondou v. New York, N.H. & H.R. Co. (Second Employers' Liability Cases), 223 U.S. 1, 51 , 32 S.Ct. 169, 38 L.R.A.(N.S.) 44, that it is the 'effect upon interstate commerce,' not 'the source of the injury,' which is 'the criterion of congressional power.' We have held that, in dealing with common carriers engaged in both interstate and intrastate commerce, the dominant authority of Congress necessarily embraces the right to control their intrastate operations in all matters having such a close and substantial relation to interstate traffic that the control is essential or appropriate to secure the freedom of that traffic from interference or unjust discrimination and to promote the efficiency of the interstate service. Houston, E. & W.T.R. Co. v. U.S. (The Shreveport Case), 234 U.S. 342, 351 , 352 S., 34 S.Ct. 833; Railroad Commission of State of Wisconsin v. Chicago, Burlington & Quincy R. Co., 257 U.S. 563, 588 , 42 S.Ct. 232, 22 A.L.R. 1086. And combinations and conspiracies to restrain interstate commerce, or to monopolize any part of it, are none the less within the reach of the Anti-Trust Act (15 USCA 1 et seq.) because the conspirators seek to attain their end by means of intrastate activities. Coronado Coal Company v. United Mine Workers, 268 U.S. 295, 310 , 45 S.Ct. 551; Bedford Cut Stone Company v. Journeyman Stone Cutters' Association, 274 U.S. 37, 46 , 47 S.Ct. 522, 54 A.L.R. 791.
+
+We recently had occasion, in Local 167 V. United States, 291 U.S. 293 , 54 S.Ct. 396, to apply this principle in connection with [295 U.S. 495, 545]   the live poultry industry. That was a suit to enjoin a conspiracy to restrain and monopolize interstate commerce in violation of the Anti-Trust Act. It was shown that marketmen, teamsters, and slaughterers (shochtim) had conspired to burden the free movement of live poultry into the metropolitan area in and about New York City. Marketmen had organized an association, had allocated retailers among themselves, and had agreed to increase prices. To accomplish their objects, large amounts of money were raised by levies upon poultry sold, men were hired to obstruct the business of dealers who resisted, wholesalers and retailers were spied upon, and by violence and other forms of intimidation were prevented from freely purchasing live poultry. Teamsters refused to handle poultry for recalcitrant marketmen, and members of the shochtim union refused to slaughter. In view of the proof of that conspiracy, we said that it was unnecessary to decide when interstate commerce ended and when intrastate commerce began. We found that the proved interference by the conspirators 'with the unloading, the transportation, the sales by marketmen to retailers, the prices charged, and the amount of profits exacted' operated 'substantially and directly to restrain and burden the untrammelled shipment and movement of the poultry,' while unquestionably it was in interstate commerce. The intrastate acts of the conspirators were included in the injunction because that was found to be necessary for the protection of interstate commerce against the attempted and illegal restraint. Id. 291 U.S. 293 , pp. 297, 299, 300, 54 S.Ct. 396, 398.
+
+The instant case is not of that sort. This is not a prosecution for a conspiracy to restrain or monopolize interstate commerce in violation of the Anti-Trust Act. Defendants have been convicted, not upon direct charges of injury to interstate commerce or of interference with persons engaged in that commerce, but of violations of certain provisions of the Live Poultry Code and of con- [295 U.S. 495, 546]   spiracy to commit these violations. Interstate commerce is brought in only upon the charge that violations of these provisions-as to hours and wages of employees and local sales-'affected' interstate commerce.
+
+In determining how far the federal government may go in controlling intrastate transactions upon the ground that they 'affect' interstate commerce, there is a necessary and well-established distinction between direct and indirect effects. The precise line can be drawn only as individual cases arise, but the distinction is clear in principle. Direct effects are illustrated by the railroad cases we have cited, as, e.g., the effect of failure to use prescribed safety appliances on railroads which are the highways of both interstate and intrastate commerce, injury to an employee engaged in interstate transportation by the negligence of an employee engaged in an intrastate movement, the fixing of rates for intrastate transportation which unjustly discriminate against interstate commerce. But where the effect of intrastate transactions upon interstate commerce is merely indirect, such transactions remain within the domain of state power. If the commerce clause were construed to reach all enterprises and transactions which could be said to have an indirect effect upon interstate commerce, the federal authority would embrace practically all the activities of the people, and the authority of the state over its domestic concerns would exist only by sufferance of the federal government. Indeed, on such a theory, even the development of the state's commercial facilities would be subject to federal control. As we said in Simpson v. Shepard (Minnesota Rate Case), 230 U.S. 352, 410 , 33 S. Ct. 729, 745, 48 L.R.A. (N.S.) 1151, Ann. Cas. 1916A, 18: 'In the intimacy of commercial relations, much that is done in the superintendence of local matters may have an indirect bearing upon interstate commerce. The development of local resources and the extension of local facilities may have a very important effect upon communities less favored, and to an appreciable degree [295 U.S. 495, 547]   alter the course of trade. The freedom of local trade may stimulate interstate commerce, while restrictive measures within the police power of the state, enacted exclusively with respect to internal business, as distinguished from interstate traffic, may in their reflex or indirect influence diminish the latter and reduce the volume of articles transported into or out of the state.' See, also, Kidd v. Pearson, 128 U.S. 1, 21 , 9 S.Ct. 6; Heisler v. Thomas Colliery Co., 260 U.S. 245, 259 , 260 S., 43 S.Ct. 83.
+
+The distinction between direct and indirect effects has been clearly recognized in the application of the Anti-Trust Act. Where a combination or conspiracy is formed, with the intent to restrain interstate commerce or to monopolize any part of it, the violation of the statute is clear. Coronado Coal Company v. United Mine Workers, 268 U.S. 295, 310 , 45 S.Ct. 551. But, where that intent is absent, and the objectives are limited to intrastate activities, the fact that there may be an indirect effect upon interstate commerce does not subject the parties to the federal statute, notwithstanding its broad provisions. This principle has frequently been applied in litigation growing out of labor disputes. United Mine Workers v. Coronado Coal Company, 259 U.S. 344, 410 , 411 S., 42 S. Ct. 570, 27 A.L.R. 762; United Leather Workers' International Union v. Herkert, 265 U.S. 457 , 464-467, 44 S.Ct. 623, 33 A.L.R. 566; Industrial Association v. United States, 268 U.S. 64, 82 , 45 S.Ct. 403; Levering & Garrigues v. Morrin, 289 U.S. 103, 107 , 108 S., 53 S.Ct. 549, 551. In the case last cited we quoted with approval the rule that had been stated and applied in Industrial Association v. United States, supra, after review of the decisions, as follows: 'The alleged conspiracy, and the acts here complained of, spent their intended and direct force upon a local situation-for building is as essentially local as mining, manufacturing or growing crops-and if, by resulting diminution of the commercial demand, interstate trade was curtailed either generally or in specific instances that was a fortuitous consequence so remote and indirect [295 U.S. 495, 548]   as plainly to cause it to fall outside the reach of the Sherman Act (15 USCA 1-7, 15 note).'
+
+While these decisions related to the application of the Federal statute, and not to its constitutional validity, the distinction between direct and indirect effects of intrastate transactions upon interstate commerce must be recognized as a fundamental one, essential to the maintenance of our constitutional system. Otherwise, as we have said, there would be virtually no limit to the federal power, and for all practical purposes we should have a completely centralized government. We must consider the provisions here in question in the light of this distinction.
+
+The question of chief importance relates to the provisions of the code as to the hours and wages of those employed in defendants' slaughterhouse markets. It is plain that these requirements are imposed in order to govern the details of defendants' management of their local business. The persons employed in slaughtering and selling in local trade are not employed in interstate commerce. Their hours and wages have no direct relation to interstate commerce. The question of how many hours these employees should work and what they should be paid differs in no essential respect from similar questions in other local businesses which handle commodities brought into a state and there dealt in as a part of its internal commerce. This appears from an examination of the considerations urged by the government with respect to conditions in the poultry trade. Thus, the government argues that hours and wages affect prices; that slaughterhouse men sell at a small margin above operating costs; that labor represents 50 to 60 per cent. of these costs; that a slaughterhouse operator paying lower wages or reducing his cost by exacting long hours of work translates his saving into lower prices; that this results in demands for a cheaper grade of goods: and that the cutting [295 U.S. 495, 549]   of prices brings about a demoralization of the price structure. Similar conditions may be adduced in relation to other businesses. The argument of the government proves too much. If the federal government may determine the wages and hours of employees in the internal commerce of a state, because of their relation to cost and prices and their indirect effect upon interstate commerce, it would seem that a similar control might be exerted over other elements of cost, also affecting prices, such as the number of employees, rents, advertising, methods of doing business, etc. All the processes of production and distribution that enter into cost could likewise be controlled. If the cost of doing an intrastate business is in itself the permitted object of federal control, the extent of the regulation of cost would be a question of discretion and not of power.
+
+The government also makes the point that efforts to enact state legislation establishing high labor standards have been impeded by the belief that, unless similar action is taken generally, commerce will be diverted from the states adopting such standards, and that this fear of diversion has led to demands for federal legislation on the subject of wages and hours. The apparent implication is that the federal authority under the commerce clause should be deemed to extend to the establishment of rules to govern wages and hours in intrastate trade and industry generally throughout the country, thus overriding the authority of the states to deal with domestic problems arising from labor conditions in their internal commerce.
+
+It is not the province of the Court to consider the economic advantages or disadvantages of such a centralized system. It is sufficient to say that the Federal Constitution does not provide for it. Our growth and development have called for wide use of the commerce power of the federal government in its control over the expanded activities of interstate commerce and in protecting that [295 U.S. 495, 550]   commerce from burdens, interferences, and conspiracies to restrain and monopolize it. But the authority of the federal government may not be pushed to such an extreme as to destroy the distinction, which the commerce clause itself establishes, between commerce 'among the several States' and the internal concerns of a state. The same answer must be made to the contention that is based upon the serious economic situation which led to the passage of the Recovery Act-the fall in prices, the decline in wages and employment, and the curtailment of the market for commodities. Stress is laid upon the great importance of maintaining wage distributions which would provide the necessary stimulus in starting 'the cumulative forces making for expanding commercial activity.' Without in any way disparaging this motive, it is enough to say that the recuperative efforts of the federal government must be made in a manner consistent with the authority granted by the Constitution.
+
+We are of the opinion that the attempt through the provisions of the code to fix the hours and wages of employees of defendants in their intrastate business was not a valid exercise of federal power.
+
+The other violations for which defendants were convicted related to the making of local sales. Ten counts, for violation of the provision as to 'straight killing,' were for permitting customers to make 'selections of individual chickens taken from particular coops and half coops.' Whether or not this practice is good or bad for the local trade, its effect, if any, upon interstate commerce was only indirect. The same may be said of violations of the code by intrastate transactions consisting of the sale 'of an unfit chicken' and of sales which were not in accord with the ordinances of the city of New York. The requirement of reports as to prices and volumes of defendants' sales was incident to the effort to control their intrastate business. [295 U.S. 495, 551]   In view of these conclusions, we find it unnecessary to discuss other questions which have been raised as to the validity of certain provisions of the code under the due process clause of the Fifth Amendment.
+
+On both the grounds we have discussed, the attempted delegation of legislative power and the attempted regulation of intrastate transactions which affect interstate commerce only indirectly, we hold the code provisions here in question to be invalid and that the judgment of conviction must be reversed.
+No. 854
+-reversed.
+
+No. 864-affirmed.
+
+Mr. Justice CARDOZO (concurring).
+
+The delegated power of legislation which has found expression in this code is not canalized within banks that keep it from overflowing. It is unconfined and vagrant, if I may borrow my own words in an earlier opinion. Panama Refining Co. v. Ryan, 293 U.S. 388, 440 , 55 S.Ct. 241.
+
+This court has held that delegation may be unlawful, though the act to be performed is definite and single, if the necessity, time, and occasion of performance have been left in the end to the discretion of the delegate. Panama Refining Co. v. Ryan, supra. I thought that ruling went too far. I pointed out in an opinion that there had been 'no grant to the Executive of any roving commission to inquire into evils and then, upon discovering them, do anything he pleases.' 293 U.S. 388 , at page 435, 55 S. Ct. 241, 254. Choice, though within limits, had been given him 'as to the occasion, but none whatever as to the means.' Id. Here, in the case before us, is an attempted delegation not confined to any single act nor to any class or group of acts identified or described by reference to a standard. Here in effect is a roving commission to inquire into evils and upon discovery correct them. [295 U.S. 495, 552]   I have said that there is no standard, definite or even approximate, to which legislation must conform. Let me make my meaning more precise. If codes of fair competition are codes eliminating 'unfair' methods of competition ascertained upon inquiry to prevail in one industry or another, there is no unlawful delegation of legislative functions when the President is directed to inquire into such practices and denounce them when discovered. For many years a like power has been committed to the Federal Trade Commission with the approval of this court in a long series of decisions. Cf. Federal Trade Commission v. R.F. Keppel & Bro., 291 U.S. 304, 312 , 54 S.Ct. 423; Federal Trade Commission v. Raladam Co., 283 U.S. 643, 648 , 51 S.Ct. 587, 79 A.L.R. 1191; Federal Trade Commission v. Gratz, 253 U.S. 421 , 40 S.Ct. 572. Delegation in such circumstances is born of the necessities of the occasion. The industries of the country are too many and diverse to make it possible for Congress, in respect of matters such as these, to legislate directly with adequate appreciation of varying conditions. Nor is the substance of the power changed because the President may act at the instance of trade or industrial associations having special knowledge of the facts. Their function is strictly advisory; it is the imprimatur of the President that begets the quality of law. Doty v. Love, 295 U.S. 64 , 55 S.Ct. 558, 79 L.Ed. --. When the task that is set before one is that of cleaning house, it is prudent as well as usual to take counsel of the dwellers.
+
+But there is another conception of codes of fair competition, their significance and function, which leads to very different consequences, though it is one that is struggling now for recognition and acceptance. By this other conception a code is not to be restricted to the elimination of business practices that would be characterized by general acceptation as oppressive or unfair. It is to include whatever ordinances may be desirable or helpful for the well-being or prosperity of the industry [295 U.S. 495, 553]   affected. In that view, the function of its adoption is not merely negative, but positive; the planning of improvements as well as the extirpation of abuses. What is fair, as thus conceived, is not something to be contrasted with what is unfair or fraudulent or tricky. The extension becomes as wide as the field of industrial regulation. If that conception shall prevail, anything that Congress may do within the limits of the commerce clause for the betterment of business may be done by the President upon the recommendation of a trade association by calling it a code. This is delegation running riot. No such plenitude of power is susceptible of transfer. The statute, however, aims at nothing less, as one can learn both from its terms and from the administrative practice under it. Nothing less is aimed at by the code now submitted to our scrutiny.
+
+The code does not confine itself to the suppression of methods of competition that would be classified as unfair according to accepted business standards or accepted norms of ethics. It sets up a comprehensive body of rules to promote the welfare of the industry, if not the welfare of the nation, without reference to standards, ethical or commercial, that could be known or predicted in advance of its adoption. One of the new rules, the source of ten counts in the indictment, is aimed at an established practice, not unethical or oppressive, the practice of selective buying. Many others could be instanced as open to the same objection if the sections of the code were to be examined one by one. The process of dissection will not be traced in all its details. Enough at this time to state what it reveals. Even if the statute itself had fixed the meaning of fair competition by way of contrast with practices that are oppressive or unfair, the code outruns the bounds of the authority conferred. What is excessive is not sporadic or superficial. It is deep- seated and per- [295 U.S. 495, 554]   vasive. The licit and illicit sections are so combined and welded as to be incapable of severance without destructive mutilation.
+
+But there is another objection, far-reaching and incurable, aside from any defect of unlawful delegation.
+
+If this code had been adopted by Congress itself, and not by the President on the advice of an industrial association, it would even then be void, unless authority to adopt it is included in the grant of power 'to regulare commerce with foreign nations, and among the several States.' United States Constitution, art. 1, 8, cl. 3.
+
+I find no authority in that grant for the regulation of wages and hours of labor in the intrastate transactions that make up the defendants' business. As to this feature of the case, little can be added to the opinion of the court. There is a view of causation that would obliterate the distinction between what is national and what is local in the activities of commerce. Motion at the outer rim is communicated perceptibly, though minutely, to recording instruments at the center. A society such as ours 'is an elastic medium which transmits all tremors throughout its territory; the only question is of their size.' Per Learned Hand, J., in the court below. The law is not indifferent to considerations of degree. Activities local in their immediacy do not become interstate and national because of distant repercussions. What is near and what is distant may at times be uncertain. Cf. Board of Trade of City of Chicago v. Olsen, 262 U.S. 1 , 43 S.Ct. 470. There is no penumbra of uncertainty obscuring judgment here. To find immediacy or directness here is to find it almost everywhere. If centripetal forces are to be isolated to the exclusion of the forces that oppose and counteract them, there will be an end to our federal system.
+
+To take from this code the provisions as to wages and the hours of labor is to destroy it altogether. If a trade or an industry is so predominantly local as to be exempt [295 U.S. 495, 555]   from regulation by the Congress in respect of matters such as these, there can be no 'code' for it at all. This is clear from the provisions of section 7(a) of the act (15 USCA 707(a), with its explicit disclosure of the statutory scheme. Wages and the hours of labor are essential features of the plan, its very bone and sinew. There is no opportunity in such circumstances for the severance of the infected parts in the hope of saving the remainder. A code collapses utterly with bone and sinew gone.
+
+I am authorized to state that Mr. Justice STONE joins in this opinion.
+
+Footnotes
+
+[ Footnote 1 ] The full title of the Code is 'Code of Fair Competition for the Live Poultry Industry of the Metropolitan Area in and about the City of New York.'
+
+[ Footnote 2 ] The indictment contained 60 counts, of which 27 counts were dismissed by the trial court, and on 14 counts the defendants were acquitted.
+
+[ Footnote 3 ] Act of June 16, 1933, c. 90, 48 Stat. 195, 196; 15 U.S.C. 703 (15 USCA 703).
+
+[ Footnote 4 ] 'Codes of fair competition.
+
+'Sec. 3. (a) Upon the application to the President by one or more trade or industrial associations or groups, the President may approve a code or codes of fair competition for the trade or industry or subdivision thereof, represented by the applicant or applicants, if the President finds (1) that such associations or groups impose no inequitable restrictions on admission to membership therein and are truly representative of such trades or industries or subdivisions thereof, and ( 2) that such code or codes are not designed to promote monopolies or to eliminate or oppress small enterprises and will not operate to discriminate against them, and will tend to effectuate the policy of this title: Provided, That such code or codes shall not permit monopolies or monopolistic practices: Provided further, That where such code or codes affect the services and welfare of persons engaged in other steps of the economic process, nothing in this section shall deprive such persons of the right to be heard prior to approval by the President of such code or codes. The President may, as a condition of his approval of any such code, impose such conditions (including requirements for the making of reports and the keeping of accounts) for the protection of consumers, competitors, employees, and others, and in furtherance of the public interest, and may provide such exceptions to and exemptions from the provisions of such code. as the President in his discretion deems necessary to effectuate the policy herein declared.
+
+'(b) After the President shall have approved any such code, the provisions of such code shall be the standards of fair competition for such trade or industry or subdivision thereof. Any violation of such standards in any transaction in or affecting interstate or foreign commerce shall be deemed an unfair method of competition in commerce within the meaning of the Federal Trade Commission Act, as amended ( chapter 2 of this title); but nothing in this title (chapter) shall be construed to impair the powers of the Federal Trade Commission under such Act, as amended (chapter 2).
+
+[ Footnote 5 ] The executive order is as follows:
+
+'Executive Order.
+
+'Approval of Code of Fair Competition for the Live Poultry Industry of the Metropolitan Area in and about the City of New York.
+
+'Whereas, the Secretary of Agriculture and the Administrator of the National Industrial Recovery Act having rendered their separate reports and recommendations and findings on the provisions of said code, coming within their respective jurisdictions, as set forth in the Executive Order No. 6182 of June 26, 1933, as supplemented by Executive Order No. 6207 of July 21, 1933, and Executive Order N. 6345 of October 20, 1933, as amended by Executive Order No. 6551 of January 8, 1934;
+
+'Now, therefore, I, Franklin D. Roosevelt, President of the United States, pursuant to the authority vested in me by title I of the National Industrial Recovery Act, approved June 16, 1933, and otherwise, do hereby find that:
+
+'1. An application has been duly made, pursuant to and in full compliance with the provisions of title I of the National Industrial Recovery Act, approved June 16, 1933, for my approval of a code of fair competition for the live poultry industry in the metropolitan area in and about the City of New York; and
+
+'2. Due notice and opportunity for hearings to interested parties have been given pursuant to the provisions of the act and regulations thereunder; and,
+
+'3. Hearings have been held upon said code, pursuant to such notice and pursuant to the pertinent provisions of the act and regulations thereunder; and
+
+'4. Said code of fair competition constitutes a code of fair competition, as contemplated by the act and complies in all respects with the pertinent provisions of the act, including clauses (1) and (2) of subsection (a) of section 3 of title I of the act; and
+
+'5. It appears, after due consideration, that said code of fair competition will tend to effectuate the policy of Congress as declared in section 1 of title I of the act.
+
+'Now, therefore, I, Franklin D. Roosevelt, President of the United States, pursuant to the authority vested in me by title I of the National Industrial Recovery Act, approved June 16, 1933, and otherwise, do hereby approve said Code of Fair Competition for the Live Poultry Industry in the Metropolitan Area in and about the City of New York.
+
+'Franklin D. Roosevelt, 'President of the United States. 'The White House, 'April 13, 1934.'
+
+[ Footnote 6 ] The Administrator for Industrial Recovery stated in his report that the Code had been sponsored by trade associations representing about 350 wholesale firms, 150 retail shops, and 21 commission agencies; that these associations represented about 90 per cent. of the live poultry industry by numbers and volume of business; and that the industry as defined in the code supplies the consuming public with practically all the live poultry coming into the metropolitan area from forty-one states and transacted an aggreagate annual business of approximately $90,000,000. He further said that about 1,610 employees were engaged in the industry; that it had suffered severely on account of the prevailing economic conditions and because of unfair methods of competition and the abuses that had developed as a result of the 'uncontrolled methods of doing business'; and that these conditions had reduced the number of employees by approximately 40 per cent. He added that the report of the Research and Planning Division indicated that the code would bring about an increase in wages of about 20 per cent. in this industry and an increase in employment of 19.2 per cent.
+
+[ Footnote 7 ] The prohibition in the code (article VII, 14) was as follows: 'Straight Killing.-The use, in the wholesale slaughtering of poultry, of any method of slaughtering other than 'straight killing' or killing on the basis of official grade. Purchasers may, however, make selection of a half coop, coop, or coops, but shall not have the right to make any selection of particular birds.'
+
+[ Footnote 8 ] See Ex parte Milligan, 4 Wall. 2, 120, 121; Home Building & Loan Association v. Blaisdell, 290 U.S. 398, 426 , 54 S.Ct. 231, 88 A.L.R. 1481.
+
+[ Footnote 9 ] That section (15 USCA 701), under the heading 'Declaration of Policy,' is as follows: 'Section 1. A national emergency productive of widespread unemployment and disoreganization of industry, which burdens interstate and foreign commerce, affects the public welfare, and undermines the standards of living of the American people, is hereby declared to exist. It is hereby declared to be the policy of Congress to remove obstructions to the free flow of interstate and foreign commerce which tend to diminish the amount thereof; and to provide for the general welfare by promoting the organization of industry for the purpose of co- operative action among trade groups, to induce and maintain united action of labor and management under adequate governmental sanctions and supervision, to eliminate unfair competitive practices, to promote the fullest possible utilization of the present productive capacity of industries, to avoid undue restriction of production (except as may be temporarily required), to increase the consumption of industrial and agricultural products by increasing purchasing power, to reduce and relieve unemployment, to improve standards of labor, and otherwise to rehabilitate industry and to conserve natural resources.'
+
+[ Footnote 10 ] See cases collected in Nims on Unfair Competition and Trade-Marks, c. I, 4, p. 19, and chapter XIX.
+
+[ Footnote 11 ] Act of September 26, 1914, c. 311, 38 Stat. 717, 719, 720 (section 5 (15 USCA 45)).
+
+[ Footnote 12 ] The Tariff Act of 1930 (section 337, 46 Stat. 703 (19 USCA 1337 )), like the Tariff Act of 1922 (section 316, 42 Stat. 943 (19 USCA 174 et seq.)), employs the expressions 'unfair methods of competition' and 'unfair acts' in the importation of articles into the United States, and in their sale, 'the effect or tendency of which is to destroy or substantially injure an industry, efficiently and economically operated, in the United States, or to prevent the establishment of such an industry, or to restrain or monopolize trade and commerce in the United States.' Provision is made for investigation and findings by the Tariff Commission, for appeals upon questions of law to the United States Court of Customs and Patent Appeals, and for ultimate action by the President when the existence of any 'such unfair method or act' is established to his satisfaction.
+
+[ Footnote 13 ] See note 9.
+
+[ Footnote 14 ] Act of July 26, 1866, c. 262, 14 Stat. 251; Jackson v. Roby, 109 U.S. 440, 441 , 3 S.Ct. 301; Erhardt v. Boaro, 113 U.S. 527, 535 , 5 S.Ct. 560; Butte City Water Co. v. Baker, 196 U.S. 119, 126 , 25 S.Ct. 211.
+
+[ Footnote 15 ] Act of March 2, 1893, c. 196, 27 Stat. 531 (45 USCA 1 et seq.); St. Louis, Iron Mountain & S. Railway Co. v. Taylor, 210 U.S. 281, 286 , 28 S.Ct. 616.
+
+[ Footnote 16 ] Act of February 23, 1927, c. 169, 44 Stat. 1162, as amended by the Act of March 28, 1928, c. 263, 45 Stat. 373.
+
+[ Footnote 17 ] Act of September 21, 1922, c. 356, title 3, 315, 42 Stat. 858, 941 (19 USCA 154 et seq.).
+`;
+
+    const opinionTextEl = document.getElementById('opinionText');
+    opinionTextEl.innerHTML = fullOpinionText.replace(/\b(\w+)\b/g, '<span class="word">$1</span>');
+
+    // 点击单词朗读
+    opinionTextEl.addEventListener('click', (e) => {
+      if (e.target.classList.contains('word')) {
+        speak(e.target.textContent);
+      }
+    });
+
+    // 全文朗读按钮
+    document.getElementById('readFull').addEventListener('click', () => {
+      speak(fullOpinionText);
+    });
+
+    // 语音合成函数
+    function speak(text) {
+      if ('speechSynthesis' in window) {
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = 'en-US';
+        utter.rate = 0.9;
+        speechSynthesis.speak(utter);
+      } else {
+        alert('您的浏览器不支持语音合成功能。');
+      }
+    }
+
+    // 智能术语检索 (基于全文，高亮匹配)
+    const globalSearch = document.getElementById('globalSearch');
+    const searchResults = document.getElementById('searchResults');
+    globalSearch.addEventListener('input', () => {
+      const query = globalSearch.value.trim();
+      if (!query) {
+        opinionTextEl.innerHTML = fullOpinionText.replace(/\b(\w+)\b/g, '<span class="word">$1</span>');
+        searchResults.textContent = '';
+      } else {
+        const regex = new RegExp(`(${query})`, 'gi');
+        opinionTextEl.innerHTML = fullOpinionText.replace(regex, '<mark class="highlight">$1</mark>').replace(/\b(\w+)\b/g, '<span class="word">$1</span>');
+        const matches = opinionTextEl.querySelectorAll('mark').length;
+        searchResults.textContent = matches > 0 ? `找到 ${matches} 处匹配。` : '无匹配结果。';
+      }
+      // 重新绑定点击朗读
+      opinionTextEl.querySelectorAll('.word').forEach(word => {
+        word.addEventListener('click', (e) => speak(e.target.textContent));
+      });
+    });
+
+    // 闪卡记忆
+    let currentCard = 0;
+    let flipped = false;
+    const flashcard = document.getElementById('flashcardContainer');
+    const prevBtn = document.getElementById('prevCard');
+    const nextBtn = document.getElementById('nextCard');
+    const masterCurrentBtn = document.getElementById('masterCurrent');
+
+    function showCard() {
+      const item = flashcardData[currentCard];
+      flashcard.innerHTML = `<p class="mb-0" style="font-size: 1.5rem; font-weight: 600;">${flipped ? item.back : item.front}</p>`;
+      // 更新当前卡片掌握按钮
+      masterCurrentBtn.setAttribute('data-id', item.id);
+      if (mastered.has(item.id)) {
+        masterCurrentBtn.textContent = '已掌握';
+        masterCurrentBtn.disabled = true;
+        masterCurrentBtn.classList.add('btn-success');
+        masterCurrentBtn.classList.remove('btn-outline-pro');
+      } else {
+        masterCurrentBtn.textContent = '掌握';
+        masterCurrentBtn.disabled = false;
+        masterCurrentBtn.classList.remove('btn-success');
+        masterCurrentBtn.classList.add('btn-outline-pro');
+      }
+    }
+
+    flashcard.addEventListener('click', () => {
+      flipped = !flipped;
+      showCard();
+    });
+    prevBtn.addEventListener('click', () => {
+      currentCard = (currentCard - 1 + flashcardData.length) % flashcardData.length;
+      flipped = false;
+      showCard();
+    });
+    nextBtn.addEventListener('click', () => {
+      currentCard = (currentCard + 1) % flashcardData.length;
+      flipped = false;
+      showCard();
+    });
+    masterCurrentBtn.addEventListener('click', () => {
+      const id = masterCurrentBtn.getAttribute('data-id');
+      mastered.add(id);
+      saveMastered();
+      updateProgress();
+      showCard(); // 更新按钮状态
+    });
+    showCard();
+
+    // 回顶按钮
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => {
+      backTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    });
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // 侧边栏激活
+    const navLinks = document.querySelectorAll('.nav-link-pro');
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 150) current = sec.id;
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) link.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
